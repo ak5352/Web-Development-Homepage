@@ -1,0 +1,34 @@
+<?php
+	$item11 = "Potion";
+	$item12 = "Images/potion.png";
+	$item13 = 10;
+	$item14 = 300;
+	$item21 = "Antidote";
+	$item22 = "Images/antidote.png";
+	$item23 = 10;
+	$item24 = 100;
+	$item31 = "Green Tea";
+	$item32 = "Images/tea.png";
+	$item33 = 10;
+	$item34 = 100;
+	$item41 = "New Rod";
+	$item42 = "Images/rod.png";
+	$item43 = 10;
+	$item44 = 200;
+	$item51 = "Pokeball";
+	$item52 = "Images/pokeball.png";
+	$item53 = 10;
+	$item54 = 300;
+	$item61 = "Greatball";
+	$item62 = "Images/greatball.png";
+	$item63 = 10;
+	$item64 = 600;
+	$item71 = "Full Heal";
+	$item72 = "Images/heal.png";
+	$item73 = 10;
+	$item74 = 600;
+	$item81 = "Max Revive";
+	$item82 = "Images/revive.png";
+	$item83 = 10;
+	$item84 = 700;
+?>

@@ -1,0 +1,315 @@
+
+/* WEB DEVELOPMENT ASSIGNMENT 1
+ * AVANTIKA KHANNA 
+ */
+
+public class GumBall 
+{
+	public static void main(String [] args)
+	{
+		// Create a random number generator for each color except red. Call the variables num + color
+		int numYellow = (int) (Math.random()* 6)+ 10;
+		int numBlue = (int) (Math.random()* 10)+ 1;
+		int numWhite = (int) (Math.random()* 10)+ 6;
+		int numGreen = (int) (Math.random()* 16)+ 10;
+		int numBlack = (int) (Math.random()* 12)+ 1;
+		int numPurple = (int) (Math.random()* 6)+ 5;
+		int numSilver = (int) (Math.random()* 3)+ 4;
+		int numCyan = (int) (Math.random()* 8)+ 5;
+		int numMagenta = (int) (Math.random()* 11);
+	    int numRed = 1;
+	    
+	    int totalGumballs = numYellow + numBlue + numWhite + numGreen + numBlack + numPurple + 
+	    		numSilver + numCyan + numMagenta + numRed;
+		
+	    // Print out how many of each color there is.
+	    System.out.println("You are starting with the following gumballs in this machine:" );
+	    System.out.println(numYellow + " Yellow");
+	    System.out.println(numBlue + " Blue");
+	    System.out.println(numWhite + " White");
+	    System.out.println(numGreen + " Green");
+	    System.out.println(numBlack + " Black");
+	    System.out.println(numPurple + " Purple");
+	    System.out.println(numSilver + " Silver");
+	    System.out.println(numCyan + " Cyan");
+	    System.out.println(numMagenta + " Magenta");
+	    System.out.println(numRed + " Red");
+	    
+	    System.out.println();
+	    System.out.println();
+	    
+	    // label each color
+	    int yellow = 0;
+	    int blue = 1;
+	    int white = 2;
+	    int green = 3;
+	    int black = 4;
+	    int purple = 5;
+	    int silver = 6;
+	    int cyan = 7;
+	    int magenta = 8;
+	    int red = 9;
+	    
+	    // create an array for the gumballs with the size being the total number of gumballs
+	    int gumballArray[] = new int[totalGumballs];
+	    
+	    // load values into the gumballArray
+	    for (int i = 0; i < gumballArray.length; i++)
+	    {
+	    	if (i == 0)
+	    	{ // make the first index represent red
+	    		gumballArray[i] = red;
+	    	}
+	    	
+	    	else if (i >= 1 && i <= numYellow)
+	    	{ // make the next numYellow indices represent yellow
+	    		gumballArray[i] = yellow;
+	    	}
+	    	
+	    	if (i >= numYellow + 1 && i <= numYellow + numBlue)
+	    	{ // then, make the following numBlue indices represent blue
+	    		gumballArray[i] = blue;
+	    	}
+	    	
+	    	if (i >= numYellow + numBlue + 1 && i <= numWhite + numBlue + numYellow)
+	    	{ // then, make the following numWhite indices represent white
+	    		gumballArray[i] = white;
+	    	}
+	    	
+	    	if (i >= numYellow + numWhite + numBlue + 1 && i <= numYellow + numBlue + numWhite + numGreen)
+	    	{ // then, make the following numGreen indices represent green
+	    		gumballArray[i] = green;
+	    	}
+	    	
+	    	if (i >= numYellow + numBlue + numWhite + numGreen + 1 && i <= numYellow + numBlue + numWhite + numGreen + numBlack)
+	    	{ // // then, make the following numBlack indices represent black
+	    		gumballArray[i] = black;
+	    	}
+	    	
+	    	if (i >= numYellow + numBlue + numWhite + numGreen + numBlack + 1 && i <= numYellow + numBlue + numWhite + numGreen + numBlack + numPurple)
+	    	{ // // then, make the following numPurple indices represent purple
+	    		gumballArray[i] = purple;
+	    	}
+	    	
+	    	if (i >= numYellow + numBlue + numWhite + numGreen + numBlack + numPurple + 1 && i <= numYellow + numBlue + numWhite + numGreen + numBlack + numPurple + numSilver)
+	    	{ // then, make the following numSilver indices represent silver
+	    		gumballArray[i] = silver;
+	    	}
+	    	
+	    	if (i >= numYellow + numBlue + numWhite + numGreen + numBlack + numPurple + numSilver + 1 && i <= numYellow + numBlue + numWhite + numGreen + numBlack + numPurple + numSilver + numCyan)
+	    	{ // then, make the following numCyan indices represent cyan
+	    		gumballArray[i] = cyan;
+	    	}
+	    	
+	    	 if (numMagenta > 0 && i >= numYellow + numBlue + numWhite + numGreen + numBlack + numPurple + numSilver + numCyan + 1 && i <= numYellow + numBlue + numWhite + numGreen + numBlack + numPurple + numSilver + numCyan + numMagenta)
+	    	{ // finally, if there are any magenta gumballs, make the last numMagenta indices represent magenta
+	    		gumballArray[i] = magenta;
+	    	} 
+	    } // end of for-loop
+	    
+	    
+	    // create variables to keep track of the number of each color gumball sold
+	    int yellowPurchased = 0;
+	    int bluePurchased = 0;
+	    int whitePurchased = 0;
+	    int greenPurchased = 0;
+	    int blackPurchased = 0;
+	    int purplePurchased =0;
+	    int silverPurchased = 0;
+	    int cyanPurchased = 0;
+	    int magentaPurchased = 0;
+	    int redPurchased = 0;
+	    int totalPurchased = 0;
+	    int chosenBall = 0;
+	   
+	    // while the red gumball is not purchased
+	   while (redPurchased != 1)
+	   { // select a random index and purchase the gumball
+	      chosenBall = (int) (Math.random() * totalGumballs);
+	      
+	      // if the gumball has not been purchased from the index
+	      if (gumballArray[chosenBall] != 99)
+	      {
+	    	  // based on the selected index, check the color of the value
+	    	  // then increment the amount of the color purchased
+	    	  // increment the total purchased
+	    	  
+	    	  if (gumballArray[chosenBall] == yellow)
+	    	  {
+	    		  System.out.println("Yellow");
+	    		  yellowPurchased++;
+	    		  totalPurchased++;
+	    	  }
+	    	  
+	    	  else if (gumballArray[chosenBall] == blue)
+	    	  {
+	    		  System.out.println("Blue");
+	    		  bluePurchased++;
+	    		  totalPurchased++;
+	    	  }
+	    	  
+	    	  else if (gumballArray[chosenBall] == white)
+	    	  {
+	    		  System.out.println("White");
+	    		  whitePurchased++;
+	    		  totalPurchased++;
+	    	  }
+	    	  
+	    	  else if (gumballArray[chosenBall] == green)
+	    	  {
+	    		  System.out.println("Green");
+	    		  greenPurchased++;
+	    		  totalPurchased++;
+	    	  }
+	    	  
+	    	  else if (gumballArray[chosenBall] == black)
+	    	  {
+	    		  System.out.println("Black");
+	    		  blackPurchased++;
+	    		  totalPurchased++;
+	    	  }
+	    	  
+	    	  else if (gumballArray[chosenBall] == purple)
+	    	  {
+	    		  System.out.println("Purple");
+	    		  purplePurchased++;
+	    		  totalPurchased++;
+	    	  }
+	    	  
+	    	  else if (gumballArray[chosenBall] == silver)
+	    	  {
+	    		  System.out.println("Silver");
+	    		  silverPurchased++;
+	    		  totalPurchased++;
+	    	  }
+	    	  
+	    	  else if (gumballArray[chosenBall] == cyan)
+	    	  {
+	    		  System.out.println("Cyan");
+	    		  cyanPurchased++;
+	    		  totalPurchased++;
+	    	  }
+	    	  
+	    	  else if (gumballArray[chosenBall] == magenta)
+	    	  {
+	    		  System.out.println("Magenta");
+	    		  magentaPurchased++;
+	    		  totalPurchased++;
+	    	  }
+	    	  
+	    	  else if (gumballArray[chosenBall] == red)
+	    	  {
+	    		  System.out.println("Red");
+	    		  redPurchased++;
+	    		  totalPurchased++;
+	    	  }
+	    	  
+	    	  // change the value in the selected index to 99
+	    	  gumballArray[chosenBall] = 99;
+	      } // end if-statement
+	      
+	      // if the selected index's gumball has already been sold, continue to the next gumball
+	      else
+	    	  continue; 
+	    } // end while loop 
+	   
+	   // Print the number of gumballs purchased
+	   System.out.println();
+	   System.out.println("You purchased " + totalPurchased+ " gumballs for a total of $" + 0.25*totalPurchased);
+	   
+	   // Put all the number of gumballs for each color purchased into an array 
+	   int maxGumballs[] = new int[10];
+	   maxGumballs[0] = yellowPurchased;
+	   maxGumballs[1] = bluePurchased;
+	   maxGumballs[2] = whitePurchased;
+	   maxGumballs[3] = greenPurchased;
+	   maxGumballs[4] = blackPurchased;
+	   maxGumballs[5] = purplePurchased;
+	   maxGumballs[6] = silverPurchased;
+	   maxGumballs[7] = cyanPurchased;
+	   maxGumballs[8] = magentaPurchased;
+	   maxGumballs[9] = redPurchased;
+	   
+	   int maxPos = 0;
+	   
+	   // first find the maximum value
+	   for (int i =0; i < maxGumballs.length; i++)
+	   {
+		   if (maxGumballs[i] >= maxGumballs[maxPos])
+		   {
+			   maxPos = i;
+		   }
+		   
+		   else
+			   continue;
+	   } // end for loop
+	   
+	   int maxValue = maxGumballs[maxPos];
+	   
+	   System.out.println();
+	   System.out.println("The color(s) purchased the most: ");
+	   
+	   // Then check how many of the colors had the maximum amount purchased
+	   for (int i =0; i < maxGumballs.length; i++)
+	   {
+		   if (maxGumballs[i] == maxValue)
+		   {
+			   if (i == yellow)
+			   {
+				   System.out.print("Yellow ");
+			   }
+			   
+			   if (i == blue)
+			   {
+				   System.out.print("Blue ");
+			   }
+			   
+			   if (i == white)
+			   {
+				   System.out.print("White ");
+			   }
+			   
+			   if (i == green)
+			   {
+				   System.out.print("Green ");
+			   }
+			   
+			   if (i == black)
+			   {
+				   System.out.print("Black ");
+			   }
+			   
+			   if (i == purple)
+			   {
+				   System.out.print("Purple ");
+			   }
+			   
+			   if (i == silver)
+			   {
+				   System.out.print("Silver ");
+			   }
+			   
+			   if (i == cyan)
+			   {
+				   System.out.print("Cyan ");
+			   }
+			   
+			   if (i == magenta)
+			   {
+				   System.out.print("Magenta ");
+			   }
+			   
+			   if (i == red)
+			   {
+				   System.out.print("Red ");
+			   }
+		   } // end if statement
+		   
+		   else
+			   continue;
+	   } // end for loop
+	   
+
+	} // end main
+	
+} // end class

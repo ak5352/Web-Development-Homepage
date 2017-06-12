@@ -1,0 +1,26 @@
+
+.column1 {
+	float:left;
+	padding-right: 5%;
+	padding-left: 5%;
+	width:40%;
+}
+
+.column2 {
+	float:left;
+	padding-right: 5%;
+	padding-left: 5%;
+	width:40%;
+}
+
+.main {
+	opacity: 1.0;
+}
+
+img.fruit:hover {
+	transform: scale(0.75);
+}
+
+img.vegetable:hover {
+	transform: scale(1.25);
+}

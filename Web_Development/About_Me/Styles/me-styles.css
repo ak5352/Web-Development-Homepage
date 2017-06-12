@@ -1,0 +1,19 @@
+
+ul {
+	list-style-type: none;
+	list-style-image: url('../Images/Pineapple.svg');
+	border: 5px solid white;
+}
+
+li {
+	color: white;
+	font-family:"Courier New", Courier, monospace;
+	font-size: 25pt;
+	text-align: left;
+}
+
+li:hover {
+	opacity: 0.5;
+	background: white;
+	color: purple;
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> CSS Code </title>
+		<link rel="stylesheet" href="../../../Styles/main.css">
+		<script src="Scripts/java_roll.js" language="javascript" type="text/javascript"></script>
+		
+		<style type="text/css">
+			@import url("Styles/assign-styles.css");
+		</style>
+		
+	</head>
+	
+	<body>
+		<img id="bg-img" src="Images/stars.gif" alt="Shooting Star">
+		
+		<div id="header">
+			<h1> CSS Code </h1>
+		</div>
+		
+		<div id="container">
+			<div class="navbar">
+				<p>
+					<a href="../../../"> 
+						<img src="Images/my button/home_up.gif" width=230 height=50 border=0 alt="Home" id="home" /> 
+					</a>
+				</p>				
+				
+				<p>
+					<a href="../../">
+						<img src="Images/my button/assign_up.gif" width=230 height=50 border=0 alt="Assignments" id="assign" />
+					</a>
+				</p>
+				
+				<p>
+					<a href="http://cs.nyu.edu/courses/spring17/CSCI-UA.0061-001/">
+						<img src="Images/my button/wph_up.gif" width=230 height=50 border=0 alt="Web Programming Homepage" id="wph" />
+					</a>
+				</p>
+				
+				<p>
+					<a href="../../../About_Me/">
+						<img src="Images/my button/me_up.gif" width=230 height=50 border=0 alt="About Me" id="me" />
+					</a>
+				</p>
+				
+				<p>
+					<a href="../../../SVG_Fun/">
+						<img src="Images/my button/fav_up.gif" width=230 height=50 border=0 alt="Fruit and Vegetables" id="fav" />
+					</a>
+				</p>
+			</div>
+			
+			<div class="main">
+				<p>
+					<a href="../"> Back to Assignment 2 Code </a>
+				</p>
+				
+				<p> CSS from "main.css" template used for all pages' layout
+					<form method="get">
+						<textarea name="ScriptArea" cols="90" rows="20" wrap="off">
+					.navbar {
+						float:left;
+						opacity: 0.5;
+						padding-left: 5%; 
+						width:15%;
+					}
+
+					 h1 {
+						 font-family: Courier;
+						 color: white;
+						 font-size: 25;
+					 }
+					 
+					 p {
+						 font-family: Courier;
+						 color: white;
+						 font-size: 15pt;
+					}
+
+					.footer {
+						padding-top: 100px;
+						font-size: 10pt;
+					}
+
+					#imgfooter {       
+						width:60px;
+						height:160px;
+						float:left;
+						position: fixed;
+						opacity: 1.0;
+					}
+
+					a{
+						text-decoration: none;
+						color: white;
+					}
+
+					a:hover {
+						color: purple;
+					}
+						</textarea>
+					</form>
+				</p>
+				
+				<p> CSS from "assign-styles.css" used for all "Assignment" pages
+					<form method="get">
+						<textarea name="ScriptArea" cols="90" rows="20" wrap="off">
+					table {
+						border: 5px solid white;
+						text-align: center;
+						font-family: "Courier New";
+					}
+
+					td {
+						padding: 5px;
+					}
+
+					tr:hover {
+						opacity: 0.5;
+						background-color: white;
+					}
+						</textarea>
+					</form>
+				</p>
+				
+				<p> CSS from "fruit-styles.css" used for "Fruit and Vegetables" page 
+					<form method="get">
+						<textarea name="ScriptArea" cols="90" rows="20" wrap="off">
+					.column1 {
+						float:left;
+						padding-right: 5%;
+						padding-left: 5%;
+						width:40%;
+					}
+
+					.column2 {
+						float:left;
+						padding-right: 5%;
+						padding-left: 5%;
+						width:40%;
+					}
+
+					.main {
+						opacity: 1.0;
+					}
+
+					img.fruit:hover {
+						transform: scale(0.75);
+					}
+
+					img.vegetable:hover {
+						transform: scale(1.25);
+					}	
+						</textarea>
+					</form>
+				</p>
+				
+				<p> CSS from "me-styles.css" used for "About Me" page
+					<form method="get">
+						<textarea name="ScriptArea" cols="90" rows="20" wrap="off">
+					ul {
+						list-style-type: none;
+						list-style-image: url('../Images/Pineapple.svg');
+						border: 5px solid white;
+					}
+
+					li {
+						color: white;
+						font-family:"Courier New", Courier, monospace;
+						font-size: 25pt;
+						text-align: left;
+					}
+
+					li:hover {
+						opacity: 0.5;
+						background: white;
+						color: purple;
+					}
+						</textarea>
+					</form>
+				</p>
+				
+				<p> CSS from "home-styles.css" used for "Home" page
+					<form method="get">
+						<textarea name="ScriptArea" cols="90" rows="20" wrap="off">
+					
+					.baby_header {
+						font-family: Courier;
+						font-size: 15pt;
+					}
+					
+						</textarea>
+					</form>
+				</p>
+				
+			</div>
+		</div>
+		
+		<div id="footer">
+			<p class="footer"> Avantika Khanna  </p>
+		</div>
+		
+		<div align=center id="img-footer">
+			<img src="Images/totoro.gif" alt="Cat" width=150px height=50px>
+		</div>
+	
+	</body>
+</html>
